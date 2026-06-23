@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>wqmaker</title>
+<style>
+:root{
+    --bg:#ffffff;
+    --text:#222222;
+    --muted:#666666;
+    --line:#dddddd;
+    --link:#2b6dad;
+    --soft:#f7f7f7;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+}
+
+a{
+    color:var(--link);
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:underline;
+}
+
+.topbar{
+    border-bottom:1px solid var(--line);
+}
+
+.topbar-inner{
+    width:min(1120px,92vw);
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    min-height:62px;
+}
+
+.site-title{
+    color:var(--text);
+    font-size:20px;
+    font-weight:700;
+}
+
+.nav{
+    display:flex;
+    gap:22px;
+    font-size:15px;
+}
+
+.layout{
+    width:min(1120px,92vw);
+    margin:34px auto 60px;
+    display:grid;
+    grid-template-columns:260px minmax(0,1fr);
+    gap:52px;
+}
+
+.profile{
+    position:sticky;
+    top:24px;
+    align-self:start;
+}
+
+.avatar{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#e9eef5,#ffffff);
+    border:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-size:42px;
+    font-weight:700;
+}
+
+.profile h1{
+    margin:20px 0 4px;
+    font-size:26px;
+    line-height:1.2;
+}
+
+.role{
+    margin:0 0 16px;
+    color:var(--muted);
+}
+
+.profile-list{
+    margin:20px 0 0;
+    padding:0;
+    list-style:none;
+    color:var(--muted);
+    font-size:15px;
+}
+
+.profile-list li{
+    margin:8px 0;
+}
+
+.content{
+    min-width:0;
+}
+
+.content h2{
+    margin:0 0 14px;
+    padding-bottom:8px;
+    border-bottom:1px solid var(--line);
+    font-size:28px;
+    line-height:1.25;
+}
+
+.content h3{
+    margin:28px 0 8px;
+    font-size:21px;
+}
+
+.content p{
+    margin:0 0 16px;
+}
+
+.muted{
+    color:var(--muted);
+}
+
+.section{
+    margin-bottom:38px;
+}
+
+.project{
+    padding:18px 0;
+    border-bottom:1px solid var(--line);
+}
+
+.project:first-of-type{
+    border-top:1px solid var(--line);
+}
+
+.project-title{
+    margin:0 0 6px;
+    font-size:20px;
+}
+
+.project-meta{
+    margin:0 0 8px;
+    color:var(--muted);
+    font-size:14px;
+}
+
+.button-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:12px;
+}
+
+.button{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 12px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    background:var(--soft);
+    color:var(--text);
+    font-size:14px;
+    font-weight:600;
+}
+
+.footer{
+    width:min(1120px,92vw);
+    margin:0 auto 36px;
+    padding-top:24px;
+    border-top:1px solid var(--line);
+    color:var(--muted);
+    font-size:14px;
+}
+
+@media (max-width: 820px){
+    .topbar-inner{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:8px;
+        padding:16px 0;
+    }
+
+    .nav{
+        flex-wrap:wrap;
+        gap:14px;
+    }
+
+    .layout{
+        grid-template-columns:1fr;
+        gap:30px;
+        margin-top:26px;
+    }
+
+    .profile{
+        position:static;
+    }
+
+    .avatar{
+        width:120px;
+        height:120px;
+        font-size:34px;
+    }
+}
+</style>
+</head>
+<body>
+<header class="topbar">
+    <div class="topbar-inner">
+        <a class="site-title" href="/">wqmaker</a>
+    </div>
+</header>
+
+<main class="layout">
+    <aside class="profile">
+        <div class="avatar">WQ</div>
+        <h1>wqmaker</h1>
+        <p class="role">Video restoration and compression enhancement</p>
+        <ul class="profile-list">
+            <li>Research demos and project pages</li>
+        </ul>
+    </aside>
+
+    <div class="content">
+        <section id="about" class="section">
+            <h2>About</h2>
+            <p>
+            </p>
+        </section>
+
+        <section id="research" class="section">
+            <h2>Research Interests</h2>
+            <p>
+            </p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <article class="project">
+                <h3 class="project-title">DiffCVE Video Demo</h3>
+                <p class="project-meta">Interactive video comparison demo</p>
+                <p>
+                    A browser-based side-by-side viewer for comparing compressed and enhanced videos across QP settings and model variants.
+                </p>
+                <div class="button-row">
+                    <a class="button" href="projects/DiffCVE/">Project Page</a>
+                </div>
+            </article>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Contact</h2>
+            <p class="muted">
+                Contact information can be added here when needed.
+            </p>
+        </section>
+    </div>
+</main>
+
+<footer class="footer">
+    <span>Powered by GitHub Pages.</span>
+</footer>
+</body>
+</html>

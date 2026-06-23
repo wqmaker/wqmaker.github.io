@@ -1,0 +1,902 @@
+[
+    {
+        "class":  "CLASSA",
+        "video":  "PeopleOnStreet_2560x1600_30",
+        "frames":  150,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSA",
+        "video":  "PeopleOnStreet_2560x1600_30",
+        "frames":  150,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSA",
+        "video":  "PeopleOnStreet_2560x1600_30",
+        "frames":  150,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSA_PeopleOnStreet_2560x1600_30_150f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSA",
+        "video":  "Traffic_2560x1600_30",
+        "frames":  150,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSA_Traffic_2560x1600_30_150f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSA_Traffic_2560x1600_30_150f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSA_Traffic_2560x1600_30_150f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSA_Traffic_2560x1600_30_150f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSA_Traffic_2560x1600_30_150f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSA",
+        "video":  "Traffic_2560x1600_30",
+        "frames":  150,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSA_Traffic_2560x1600_30_150f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSA_Traffic_2560x1600_30_150f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSA_Traffic_2560x1600_30_150f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSA_Traffic_2560x1600_30_150f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSA_Traffic_2560x1600_30_150f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSA",
+        "video":  "Traffic_2560x1600_30",
+        "frames":  150,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSA_Traffic_2560x1600_30_150f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSA_Traffic_2560x1600_30_150f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSA_Traffic_2560x1600_30_150f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSA_Traffic_2560x1600_30_150f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSA_Traffic_2560x1600_30_150f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "BQTerrace_1920x1080_60",
+        "frames":  600,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSB_BQTerrace_1920x1080_60_600f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSB_BQTerrace_1920x1080_60_600f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_BQTerrace_1920x1080_60_600f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSB_BQTerrace_1920x1080_60_600f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_BQTerrace_1920x1080_60_600f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "BQTerrace_1920x1080_60",
+        "frames":  600,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSB_BQTerrace_1920x1080_60_600f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSB_BQTerrace_1920x1080_60_600f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_BQTerrace_1920x1080_60_600f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSB_BQTerrace_1920x1080_60_600f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_BQTerrace_1920x1080_60_600f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "BQTerrace_1920x1080_60",
+        "frames":  600,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSB_BQTerrace_1920x1080_60_600f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSB_BQTerrace_1920x1080_60_600f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_BQTerrace_1920x1080_60_600f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSB_BQTerrace_1920x1080_60_600f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_BQTerrace_1920x1080_60_600f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "BasketballDrive_1920x1080_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSB_BasketballDrive_1920x1080_50_500f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSB_BasketballDrive_1920x1080_50_500f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_BasketballDrive_1920x1080_50_500f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSB_BasketballDrive_1920x1080_50_500f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_BasketballDrive_1920x1080_50_500f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "BasketballDrive_1920x1080_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSB_BasketballDrive_1920x1080_50_500f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSB_BasketballDrive_1920x1080_50_500f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_BasketballDrive_1920x1080_50_500f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSB_BasketballDrive_1920x1080_50_500f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_BasketballDrive_1920x1080_50_500f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "BasketballDrive_1920x1080_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSB_BasketballDrive_1920x1080_50_500f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSB_BasketballDrive_1920x1080_50_500f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_BasketballDrive_1920x1080_50_500f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSB_BasketballDrive_1920x1080_50_500f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_BasketballDrive_1920x1080_50_500f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "Cactus_1920x1080_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSB_Cactus_1920x1080_50_500f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSB_Cactus_1920x1080_50_500f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_Cactus_1920x1080_50_500f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSB_Cactus_1920x1080_50_500f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_Cactus_1920x1080_50_500f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "Cactus_1920x1080_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSB_Cactus_1920x1080_50_500f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSB_Cactus_1920x1080_50_500f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_Cactus_1920x1080_50_500f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSB_Cactus_1920x1080_50_500f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_Cactus_1920x1080_50_500f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "Cactus_1920x1080_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSB_Cactus_1920x1080_50_500f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSB_Cactus_1920x1080_50_500f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_Cactus_1920x1080_50_500f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSB_Cactus_1920x1080_50_500f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_Cactus_1920x1080_50_500f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "Kimono1_1920x1080_24",
+        "frames":  240,
+        "fps":  24,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSB_Kimono1_1920x1080_24_240f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSB_Kimono1_1920x1080_24_240f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_Kimono1_1920x1080_24_240f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSB_Kimono1_1920x1080_24_240f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_Kimono1_1920x1080_24_240f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "Kimono1_1920x1080_24",
+        "frames":  240,
+        "fps":  24,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSB_Kimono1_1920x1080_24_240f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSB_Kimono1_1920x1080_24_240f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_Kimono1_1920x1080_24_240f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSB_Kimono1_1920x1080_24_240f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_Kimono1_1920x1080_24_240f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "Kimono1_1920x1080_24",
+        "frames":  240,
+        "fps":  24,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSB_Kimono1_1920x1080_24_240f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSB_Kimono1_1920x1080_24_240f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_Kimono1_1920x1080_24_240f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSB_Kimono1_1920x1080_24_240f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_Kimono1_1920x1080_24_240f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "ParkScene_1920x1080_24",
+        "frames":  240,
+        "fps":  24,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSB_ParkScene_1920x1080_24_240f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSB_ParkScene_1920x1080_24_240f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_ParkScene_1920x1080_24_240f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSB_ParkScene_1920x1080_24_240f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSB_ParkScene_1920x1080_24_240f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "ParkScene_1920x1080_24",
+        "frames":  240,
+        "fps":  24,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSB_ParkScene_1920x1080_24_240f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSB_ParkScene_1920x1080_24_240f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_ParkScene_1920x1080_24_240f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSB_ParkScene_1920x1080_24_240f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSB_ParkScene_1920x1080_24_240f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSB",
+        "video":  "ParkScene_1920x1080_24",
+        "frames":  240,
+        "fps":  24,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSB_ParkScene_1920x1080_24_240f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSB_ParkScene_1920x1080_24_240f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_ParkScene_1920x1080_24_240f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSB_ParkScene_1920x1080_24_240f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSB_ParkScene_1920x1080_24_240f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "BQMall_832x480_60",
+        "frames":  600,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSC_BQMall_832x480_60_600f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSC_BQMall_832x480_60_600f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSC_BQMall_832x480_60_600f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSC_BQMall_832x480_60_600f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSC_BQMall_832x480_60_600f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "BQMall_832x480_60",
+        "frames":  600,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSC_BQMall_832x480_60_600f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSC_BQMall_832x480_60_600f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSC_BQMall_832x480_60_600f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSC_BQMall_832x480_60_600f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSC_BQMall_832x480_60_600f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "BQMall_832x480_60",
+        "frames":  600,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSC_BQMall_832x480_60_600f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSC_BQMall_832x480_60_600f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSC_BQMall_832x480_60_600f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSC_BQMall_832x480_60_600f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSC_BQMall_832x480_60_600f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "BasketballDrill_832x480_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSC_BasketballDrill_832x480_50_500f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSC_BasketballDrill_832x480_50_500f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSC_BasketballDrill_832x480_50_500f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSC_BasketballDrill_832x480_50_500f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSC_BasketballDrill_832x480_50_500f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "BasketballDrill_832x480_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSC_BasketballDrill_832x480_50_500f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSC_BasketballDrill_832x480_50_500f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSC_BasketballDrill_832x480_50_500f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSC_BasketballDrill_832x480_50_500f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSC_BasketballDrill_832x480_50_500f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "BasketballDrill_832x480_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSC_BasketballDrill_832x480_50_500f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSC_BasketballDrill_832x480_50_500f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSC_BasketballDrill_832x480_50_500f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSC_BasketballDrill_832x480_50_500f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSC_BasketballDrill_832x480_50_500f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "PartyScene_832x480_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSC_PartyScene_832x480_50_500f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSC_PartyScene_832x480_50_500f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSC_PartyScene_832x480_50_500f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSC_PartyScene_832x480_50_500f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSC_PartyScene_832x480_50_500f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "PartyScene_832x480_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSC_PartyScene_832x480_50_500f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSC_PartyScene_832x480_50_500f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSC_PartyScene_832x480_50_500f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSC_PartyScene_832x480_50_500f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSC_PartyScene_832x480_50_500f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "PartyScene_832x480_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSC_PartyScene_832x480_50_500f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSC_PartyScene_832x480_50_500f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSC_PartyScene_832x480_50_500f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSC_PartyScene_832x480_50_500f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSC_PartyScene_832x480_50_500f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "RaceHorses_832x480_30",
+        "frames":  300,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSC_RaceHorses_832x480_30_300f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSC_RaceHorses_832x480_30_300f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSC_RaceHorses_832x480_30_300f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSC_RaceHorses_832x480_30_300f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSC_RaceHorses_832x480_30_300f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "RaceHorses_832x480_30",
+        "frames":  300,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSC_RaceHorses_832x480_30_300f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSC_RaceHorses_832x480_30_300f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSC_RaceHorses_832x480_30_300f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSC_RaceHorses_832x480_30_300f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSC_RaceHorses_832x480_30_300f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSC",
+        "video":  "RaceHorses_832x480_30",
+        "frames":  300,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSC_RaceHorses_832x480_30_300f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSC_RaceHorses_832x480_30_300f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSC_RaceHorses_832x480_30_300f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSC_RaceHorses_832x480_30_300f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSC_RaceHorses_832x480_30_300f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "BQSquare_416x240_60",
+        "frames":  600,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSD_BQSquare_416x240_60_600f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSD_BQSquare_416x240_60_600f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSD_BQSquare_416x240_60_600f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSD_BQSquare_416x240_60_600f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSD_BQSquare_416x240_60_600f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "BQSquare_416x240_60",
+        "frames":  600,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSD_BQSquare_416x240_60_600f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSD_BQSquare_416x240_60_600f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSD_BQSquare_416x240_60_600f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSD_BQSquare_416x240_60_600f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSD_BQSquare_416x240_60_600f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "BQSquare_416x240_60",
+        "frames":  600,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSD_BQSquare_416x240_60_600f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSD_BQSquare_416x240_60_600f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSD_BQSquare_416x240_60_600f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSD_BQSquare_416x240_60_600f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSD_BQSquare_416x240_60_600f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "BasketballPass_416x240_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSD_BasketballPass_416x240_50_500f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSD_BasketballPass_416x240_50_500f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSD_BasketballPass_416x240_50_500f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSD_BasketballPass_416x240_50_500f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSD_BasketballPass_416x240_50_500f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "BasketballPass_416x240_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSD_BasketballPass_416x240_50_500f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSD_BasketballPass_416x240_50_500f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSD_BasketballPass_416x240_50_500f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSD_BasketballPass_416x240_50_500f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSD_BasketballPass_416x240_50_500f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "BasketballPass_416x240_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSD_BasketballPass_416x240_50_500f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSD_BasketballPass_416x240_50_500f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSD_BasketballPass_416x240_50_500f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSD_BasketballPass_416x240_50_500f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSD_BasketballPass_416x240_50_500f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "BlowingBubbles_416x240_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSD_BlowingBubbles_416x240_50_500f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSD_BlowingBubbles_416x240_50_500f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSD_BlowingBubbles_416x240_50_500f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSD_BlowingBubbles_416x240_50_500f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSD_BlowingBubbles_416x240_50_500f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "BlowingBubbles_416x240_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSD_BlowingBubbles_416x240_50_500f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSD_BlowingBubbles_416x240_50_500f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSD_BlowingBubbles_416x240_50_500f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSD_BlowingBubbles_416x240_50_500f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSD_BlowingBubbles_416x240_50_500f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "BlowingBubbles_416x240_50",
+        "frames":  500,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSD_BlowingBubbles_416x240_50_500f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSD_BlowingBubbles_416x240_50_500f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSD_BlowingBubbles_416x240_50_500f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSD_BlowingBubbles_416x240_50_500f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSD_BlowingBubbles_416x240_50_500f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "RaceHorses_416x240_30",
+        "frames":  300,
+        "fps":  30,
+        "qp":  "qp32",
+        "compressed":  "qp32/CLASSD_RaceHorses_416x240_30_300f_qp32_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp32/CLASSD_RaceHorses_416x240_30_300f_qp32_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp32/CLASSD_RaceHorses_416x240_30_300f_qp32_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp32/CLASSD_RaceHorses_416x240_30_300f_qp32_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp32/CLASSD_RaceHorses_416x240_30_300f_qp32_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "RaceHorses_416x240_30",
+        "frames":  300,
+        "fps":  30,
+        "qp":  "qp37",
+        "compressed":  "qp37/CLASSD_RaceHorses_416x240_30_300f_qp37_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp37/CLASSD_RaceHorses_416x240_30_300f_qp37_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp37/CLASSD_RaceHorses_416x240_30_300f_qp37_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp37/CLASSD_RaceHorses_416x240_30_300f_qp37_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp37/CLASSD_RaceHorses_416x240_30_300f_qp37_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    },
+    {
+        "class":  "CLASSD",
+        "video":  "RaceHorses_416x240_30",
+        "frames":  300,
+        "fps":  30,
+        "qp":  "qp42",
+        "compressed":  "qp42/CLASSD_RaceHorses_416x240_30_300f_qp42_compressed.mp4",
+        "enhanced_versions":  [
+                                  {
+                                      "model":  "DiffCVE-1",
+                                      "file":  "qp42/CLASSD_RaceHorses_416x240_30_300f_qp42_DiffCVE-1_enhanced.mp4",
+                                      "packed":  "qp42/CLASSD_RaceHorses_416x240_30_300f_qp42_DiffCVE-1_packed.mp4"
+                                  },
+                                  {
+                                      "model":  "DiffCVE-50",
+                                      "file":  "qp42/CLASSD_RaceHorses_416x240_30_300f_qp42_DiffCVE-50_enhanced.mp4",
+                                      "packed":  "qp42/CLASSD_RaceHorses_416x240_30_300f_qp42_DiffCVE-50_packed.mp4"
+                                  }
+                              ]
+    }
+]

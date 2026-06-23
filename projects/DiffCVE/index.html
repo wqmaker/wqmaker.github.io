@@ -1,0 +1,1143 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<title>DiffCVE Demo</title>
+<style>
+:root{
+    --panel:#ffffff;
+    --text:#18222d;
+    --muted:#617180;
+    --accent:#dd3d2a;
+    --line:#d7dde4;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:linear-gradient(180deg,#f7f9fb 0%,#e9eef2 100%);
+    color:var(--text);
+}
+
+.page{
+    width:min(1400px,94vw);
+    margin:32px auto 48px;
+}
+
+h1{
+    margin:0 0 10px;
+    text-align:center;
+    font-size:34px;
+}
+
+.sub{
+    margin:0 0 24px;
+    text-align:center;
+    color:var(--muted);
+    font-size:15px;
+}
+
+.toolbar{
+    display:grid;
+    grid-template-columns:repeat(3,minmax(220px,320px));
+    gap:14px;
+    justify-content:center;
+    margin-bottom:18px;
+}
+
+label{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    font-size:14px;
+    color:var(--muted);
+}
+
+select{
+    width:100%;
+    padding:11px 14px;
+    border:1px solid var(--line);
+    border-radius:12px;
+    background:var(--panel);
+    color:var(--text);
+    font-size:15px;
+}
+
+.info{
+    text-align:center;
+    margin-bottom:16px;
+    font-size:18px;
+    font-weight:600;
+}
+
+.stage{
+    background:var(--panel);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:10px 16px 16px;
+    box-shadow:0 20px 50px rgba(31,45,61,0.08);
+}
+
+.comparison-header{
+    display:grid;
+    grid-template-columns:1fr auto 1fr;
+    align-items:center;
+    gap:12px;
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:700;
+    color:var(--muted);
+}
+
+.control-button{
+    width:38px;
+    height:32px;
+    padding:0;
+    border:1px solid var(--line);
+    border-radius:8px;
+    background:var(--text);
+    color:#fff;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.comparison-header span:last-child{
+    text-align:right;
+}
+
+.control-button:hover{
+    background:#263543;
+}
+
+.viewer{
+    position:relative;
+    overflow:hidden;
+    border-radius:14px;
+    background:#000;
+    user-select:none;
+    touch-action:none;
+    aspect-ratio:16 / 9;
+}
+
+video{
+    position:absolute;
+    inset:0;
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.freeze-layer{
+    position:absolute;
+    inset:0;
+    display:none;
+    z-index:1;
+}
+
+.viewer.is-frozen video{
+    visibility:hidden;
+}
+
+.viewer.is-frozen .freeze-layer{
+    display:block;
+}
+
+.viewer.is-packed video{
+    visibility:hidden;
+}
+
+.viewer.is-packed .freeze-layer{
+    display:block;
+}
+
+.freeze-layer canvas{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+}
+
+#freezeCompressedWrap{
+    position:absolute;
+    left:0;
+    top:0;
+    width:50%;
+    height:100%;
+    overflow:hidden;
+    border-right:1px solid rgba(255,255,255,0.45);
+}
+
+#freezeCompressed{
+    width:var(--viewer-width, 100%);
+    max-width:none;
+}
+
+#overlay{
+    position:absolute;
+    left:0;
+    top:0;
+    width:50%;
+    height:100%;
+    overflow:hidden;
+    border-right:1px solid rgba(255,255,255,0.45);
+}
+
+#overlay video{
+    position:absolute;
+    left:0;
+    top:0;
+    width:var(--viewer-width, 100%);
+    height:100%;
+    max-width:none;
+    object-fit:contain;
+}
+
+#slider{
+    position:absolute;
+    left:50%;
+    top:0;
+    width:3px;
+    height:100%;
+    background:var(--accent);
+    cursor:ew-resize;
+    transform:translateX(-50%);
+    z-index:3;
+    touch-action:none;
+}
+
+#slider::before{
+    content:"";
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:28px;
+    height:28px;
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    border:3px solid var(--accent);
+    background:#fff;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px){
+    .page{
+        width:min(96vw,1400px);
+        margin-top:20px;
+    }
+
+    h1{
+        font-size:28px;
+    }
+
+    .toolbar{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+<body>
+<div class="page">
+    <h1>DiffCVE Video Comparison</h1>
+    <p class="sub">Drag the center divider. Left shows compressed video, right shows enhanced video.</p>
+
+    <div class="toolbar">
+        <label>
+            QP
+            <select id="qpSelect"></select>
+        </label>
+        <label>
+            Video
+            <select id="videoSelect"></select>
+        </label>
+        <label>
+            Model
+            <select id="modelSelect"></select>
+        </label>
+    </div>
+
+    <div id="info" class="info"></div>
+
+    <div class="stage">
+        <div class="comparison-header">
+            <span>Compressed</span>
+            <button id="playPauseButton" class="control-button" type="button" aria-label="Pause">&#10074;&#10074;</button>
+            <span>Enhanced</span>
+        </div>
+
+        <div id="viewer" class="viewer">
+            <video id="enhanced" autoplay muted playsinline preload="auto"></video>
+
+            <div id="overlay">
+                <video id="compressed" autoplay muted playsinline preload="auto"></video>
+            </div>
+
+            <div id="freezeLayer" class="freeze-layer" aria-hidden="true">
+                <canvas id="freezeEnhanced"></canvas>
+                <div id="freezeCompressedWrap">
+                    <canvas id="freezeCompressed"></canvas>
+                </div>
+            </div>
+
+            <div id="slider" role="separator" aria-label="Comparison position" aria-orientation="vertical" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" tabindex="0"></div>
+        </div>
+    </div>
+</div>
+
+<script>
+const videoBasePath = "demo_videos";
+const defaultSelection = {
+    qp: "qp42",
+    className: "CLASSB",
+    video: "Cactus_1920x1080_50"
+};
+
+let data = [];
+let activeLoadId = 0;
+let sliderRatio = 0.5;
+let dragging = false;
+let isSyncingPlayback = false;
+let isFreezing = false;
+let frameSyncId = 0;
+let packedRenderId = 0;
+let isRestarting = false;
+let userPausing = false;
+let playbackMode = "dual";
+let lastCompressedTime = 0;
+let lastCompressedTimeUpdatedAt = 0;
+let lastEnhancedTime = 0;
+let lastEnhancedTimeUpdatedAt = 0;
+let lastCompressedPresentedTime = 0;
+let lastCompressedPresentedAt = 0;
+let lastEnhancedPresentedTime = 0;
+let lastEnhancedPresentedAt = 0;
+let lastCompressedPresentedFrame = null;
+let lastEnhancedPresentedFrame = null;
+
+const recentFrameLimit = 24;
+const recentFrames = {
+    compressed: new Map(),
+    enhanced: new Map()
+};
+
+const qpSelect = document.getElementById("qpSelect");
+const videoSelect = document.getElementById("videoSelect");
+const modelSelect = document.getElementById("modelSelect");
+const info = document.getElementById("info");
+const playPauseButton = document.getElementById("playPauseButton");
+const compressed = document.getElementById("compressed");
+const enhanced = document.getElementById("enhanced");
+const overlay = document.getElementById("overlay");
+const slider = document.getElementById("slider");
+const viewer = document.getElementById("viewer");
+const freezeCompressedWrap = document.getElementById("freezeCompressedWrap");
+const freezeCompressed = document.getElementById("freezeCompressed");
+const freezeEnhanced = document.getElementById("freezeEnhanced");
+
+fetch(`metadata.json?v=${Date.now()}`)
+    .then((response) => response.json())
+    .then((items) => {
+        data = items;
+        if (!data.length) {
+            info.textContent = "No videos found. Run convert_to_mp4.py and generate_metadata.py first.";
+            return;
+        }
+
+        const defaultItem = findDefaultItem();
+        buildQpOptions(defaultItem?.qp || defaultSelection.qp);
+        buildVideoOptions(defaultItem ? getVideoKey(defaultItem) : null);
+        buildModelOptions();
+        loadVideoPair();
+    })
+    .catch(() => {
+        info.textContent = "Failed to load metadata.json. Run a local server and generate metadata first.";
+    });
+
+function findDefaultItem() {
+    return data.find((item) =>
+        item.qp === defaultSelection.qp &&
+        item.class === defaultSelection.className &&
+        item.video === defaultSelection.video
+    );
+}
+
+function getVideoKey(item) {
+    return `${item.class}||${item.video}||${item.frames}`;
+}
+
+function getCurrentItem() {
+    return data[Number(videoSelect.value)];
+}
+
+function getCurrentModelEntry() {
+    const item = getCurrentItem();
+    return item.enhanced_versions.find((entry) => entry.model === modelSelect.value) ||
+        item.enhanced_versions[0];
+}
+
+function buildQpOptions(preferredQp = null) {
+    const qps = [...new Set(data.map((item) => item.qp))].sort();
+    const targetQp = preferredQp && qps.includes(preferredQp) ? preferredQp : qps[0];
+
+    qpSelect.innerHTML = "";
+    qps.forEach((qp) => {
+        const option = document.createElement("option");
+        option.value = qp;
+        option.textContent = qp;
+        qpSelect.appendChild(option);
+    });
+    qpSelect.value = targetQp;
+}
+
+function buildVideoOptions(preferredVideoKey = null) {
+    const currentQp = qpSelect.value;
+    const items = data.filter((item) => item.qp === currentQp);
+
+    videoSelect.innerHTML = "";
+    items.forEach((item) => {
+        const option = document.createElement("option");
+        option.value = data.indexOf(item);
+        option.dataset.videoKey = getVideoKey(item);
+        option.textContent = `${item.class} | ${item.video} | ${item.frames}f`;
+        videoSelect.appendChild(option);
+    });
+
+    const matchingOption = [...videoSelect.options].find(
+        (option) => option.dataset.videoKey === preferredVideoKey
+    );
+    if (matchingOption) {
+        videoSelect.value = matchingOption.value;
+    }
+}
+
+function buildModelOptions(preferredModel = null) {
+    const item = getCurrentItem();
+    const targetModel = preferredModel || modelSelect.value;
+
+    modelSelect.innerHTML = "";
+    item.enhanced_versions.forEach((entry) => {
+        const option = document.createElement("option");
+        option.value = entry.model;
+        option.textContent = entry.model;
+        modelSelect.appendChild(option);
+    });
+
+    if ([...modelSelect.options].some((option) => option.value === targetModel)) {
+        modelSelect.value = targetModel;
+    }
+}
+
+function loadVideoPair() {
+    activeLoadId += 1;
+    frameSyncId += 1;
+    const loadId = activeLoadId;
+    const item = getCurrentItem();
+    const modelEntry = getCurrentModelEntry();
+
+    hideFrozenFrame();
+    setPlayPauseIcon(false);
+    resetRememberedTimes();
+    info.textContent = `${item.class} | ${item.video} | ${item.qp} | ${modelEntry.model}`;
+    playbackMode = modelEntry.packed ? "packed" : "dual";
+
+    compressed.pause();
+    enhanced.pause();
+    packedRenderId += 1;
+    const compressedSrc = `${videoBasePath}/${item.compressed}`;
+    const enhancedSrc = `${videoBasePath}/${modelEntry.file}`;
+
+    if (playbackMode === "packed") {
+        viewer.classList.add("is-packed");
+        compressed.pause();
+        compressed.removeAttribute("src");
+        compressed.load();
+        enhanced.src = `${videoBasePath}/${modelEntry.packed}`;
+        enhanced.load();
+    } else {
+        viewer.classList.remove("is-packed");
+        compressed.src = compressedSrc;
+        enhanced.src = enhancedSrc;
+        compressed.load();
+        enhanced.load();
+    }
+
+    const readyVideos = playbackMode === "packed"
+        ? [waitForReady(enhanced)]
+        : [waitForReady(compressed), waitForReady(enhanced)];
+
+    Promise.all(readyVideos).then(() => {
+        if (loadId !== activeLoadId) {
+            return;
+        }
+
+        if (playbackMode === "packed") {
+            setViewerAspectFromPackedVideo(enhanced);
+            drawPackedFrame();
+        } else {
+            setViewerAspectFromVideo(enhanced);
+        }
+        syncOverlayVideoWidth();
+
+        return playbackMode === "packed"
+            ? seekTo(enhanced, 0)
+            : Promise.all([seekTo(compressed, 0), seekTo(enhanced, 0)]);
+    }).then(() => {
+        if (loadId !== activeLoadId) {
+            return;
+        }
+
+        playBoth();
+        startFrameSync(loadId);
+    });
+}
+
+function waitForReady(video) {
+    if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+        return Promise.resolve();
+    }
+
+    return new Promise((resolve) => {
+        video.addEventListener("canplay", resolve, { once:true });
+    });
+}
+
+function seekTo(video, time) {
+    const duration = Number.isFinite(video.duration) ? video.duration : time;
+    const safeTime = Math.max(0, Math.min(time, duration));
+    const tolerance = Math.max(0.002, 0.25 / getCurrentFps());
+
+    if (Math.abs(video.currentTime - safeTime) <= tolerance && !video.seeking) {
+        return Promise.resolve();
+    }
+
+    return new Promise((resolve) => {
+        let settled = false;
+        const done = () => {
+            if (settled) {
+                return;
+            }
+            settled = true;
+            video.removeEventListener("seeked", done);
+            resolve();
+        };
+
+        video.addEventListener("seeked", done, { once:true });
+        video.currentTime = safeTime;
+
+        const startedAt = performance.now();
+        const waitUntilSeekSettles = () => {
+            if (settled) {
+                return;
+            }
+
+            if (!video.seeking && Math.abs(video.currentTime - safeTime) <= tolerance) {
+                done();
+                return;
+            }
+
+            if (performance.now() - startedAt > 1500) {
+                done();
+                return;
+            }
+
+            setTimeout(waitUntilSeekSettles, 25);
+        };
+
+        setTimeout(waitUntilSeekSettles, 0);
+    });
+}
+
+function waitForPaint() {
+    return new Promise((resolve) => {
+        requestAnimationFrame(() => requestAnimationFrame(resolve));
+    });
+}
+
+function waitForVideoFrame(video) {
+    if ("requestVideoFrameCallback" in video) {
+        return new Promise((resolve) => {
+            let resolved = false;
+            const done = () => {
+                if (resolved) {
+                    return;
+                }
+                resolved = true;
+                resolve();
+            };
+
+            video.requestVideoFrameCallback(done);
+            setTimeout(done, 1000);
+        });
+    }
+
+    return waitForPaint();
+}
+
+function setViewerAspectFromVideo(video) {
+    if (video.videoWidth && video.videoHeight) {
+        viewer.style.aspectRatio = `${video.videoWidth} / ${video.videoHeight}`;
+    }
+}
+
+function setViewerAspectFromPackedVideo(video) {
+    if (video.videoWidth && video.videoHeight) {
+        viewer.style.aspectRatio = `${video.videoWidth / 2} / ${video.videoHeight}`;
+    }
+}
+
+function playBoth() {
+    if (isSyncingPlayback) {
+        return;
+    }
+
+    hideFrozenFrame();
+    isSyncingPlayback = true;
+    compressed.playbackRate = 1;
+    enhanced.playbackRate = 1;
+    const playRequests = playbackMode === "packed"
+        ? [enhanced.play()]
+        : [compressed.play(), enhanced.play()];
+
+    Promise.allSettled(playRequests).finally(() => {
+        isSyncingPlayback = false;
+        setPlayPauseIcon(false);
+        if (playbackMode === "packed") {
+            startPackedRender(activeLoadId);
+        }
+    });
+}
+
+function pauseBothAndFreeze() {
+    if (isFreezing) {
+        return;
+    }
+
+    const loadId = activeLoadId;
+    userPausing = true;
+    isFreezing = true;
+    frameSyncId += 1;
+    compressed.playbackRate = 1;
+    enhanced.playbackRate = 1;
+    if (playbackMode !== "packed") {
+        compressed.pause();
+    }
+    enhanced.pause();
+    setPlayPauseIcon(true);
+    if (playbackMode === "packed") {
+        drawPackedFrame();
+        viewer.classList.add("is-frozen");
+        viewer.dataset.freezeSource = "packed";
+    } else {
+        rememberVideoTime(compressed, "compressed");
+        rememberVideoTime(enhanced, "enhanced");
+        drawFrozenFrames(getBestFrozenFramePair());
+    }
+
+    if (
+        loadId === activeLoadId &&
+        enhanced.paused &&
+        (playbackMode === "packed" || compressed.paused)
+    ) {
+        setPlayPauseIcon(true);
+    }
+
+    isFreezing = false;
+    setTimeout(() => {
+        userPausing = false;
+    }, 300);
+}
+
+function getFrameIndex(time) {
+    const fps = getCurrentFps();
+
+    return Math.max(0, Math.floor(time * fps + 0.00001));
+}
+
+function getPresentedFrameIndex(time) {
+    const fps = getCurrentFps();
+
+    return Math.max(0, Math.round(time * fps));
+}
+
+function getBestFrozenFramePair() {
+    const commonFrames = [...recentFrames.enhanced.keys()]
+        .filter((frameIndex) => recentFrames.compressed.has(frameIndex));
+
+    if (!commonFrames.length) {
+        return null;
+    }
+
+    const frameIndex = Math.max(...commonFrames);
+
+    return {
+        frameIndex,
+        enhanced: recentFrames.enhanced.get(frameIndex),
+        compressed: recentFrames.compressed.get(frameIndex),
+        source: "cache"
+    };
+}
+
+function getCurrentFps() {
+    const item = getCurrentItem();
+    const metadataFps = Number(item?.fps);
+
+    if (Number.isFinite(metadataFps) && metadataFps > 0) {
+        return metadataFps;
+    }
+
+    const fpsMatch = item?.video?.match(/_(\d+)$/);
+    const fps = fpsMatch ? Number(fpsMatch[1]) : 30;
+
+    return Number.isFinite(fps) && fps > 0 ? fps : 30;
+}
+
+function resetRememberedTimes() {
+    lastCompressedTime = 0;
+    lastCompressedTimeUpdatedAt = 0;
+    lastEnhancedTime = 0;
+    lastEnhancedTimeUpdatedAt = 0;
+    lastCompressedPresentedTime = 0;
+    lastCompressedPresentedAt = 0;
+    lastEnhancedPresentedTime = 0;
+    lastEnhancedPresentedAt = 0;
+    lastCompressedPresentedFrame = null;
+    lastEnhancedPresentedFrame = null;
+    recentFrames.compressed.clear();
+    recentFrames.enhanced.clear();
+}
+
+function rememberVideoTime(video, side, observedTime = video.currentTime) {
+    if (!Number.isFinite(observedTime)) {
+        return;
+    }
+
+    const now = performance.now();
+
+    if (side === "compressed") {
+        if (shouldIgnoreZeroTime(observedTime, lastCompressedTime, lastCompressedTimeUpdatedAt, now)) {
+            return;
+        }
+
+        lastCompressedTime = observedTime;
+        lastCompressedTimeUpdatedAt = now;
+        return;
+    }
+
+    if (shouldIgnoreZeroTime(observedTime, lastEnhancedTime, lastEnhancedTimeUpdatedAt, now)) {
+        return;
+    }
+
+    lastEnhancedTime = observedTime;
+    lastEnhancedTimeUpdatedAt = now;
+}
+
+function rememberPresentedTime(side, observedTime) {
+    if (!Number.isFinite(observedTime)) {
+        return null;
+    }
+
+    const frameIndex = getPresentedFrameIndex(observedTime);
+
+    if (side === "compressed") {
+        lastCompressedPresentedTime = observedTime;
+        lastCompressedPresentedAt = performance.now();
+        lastCompressedPresentedFrame = frameIndex;
+        return frameIndex;
+    }
+
+    lastEnhancedPresentedTime = observedTime;
+    lastEnhancedPresentedAt = performance.now();
+    lastEnhancedPresentedFrame = frameIndex;
+    return frameIndex;
+}
+
+function capturePresentedFrame(video, side, observedTime) {
+    const frameIndex = rememberPresentedTime(side, observedTime);
+
+    if (
+        frameIndex === null ||
+        !video.videoWidth ||
+        !video.videoHeight ||
+        !viewer.clientWidth ||
+        !viewer.clientHeight
+    ) {
+        return;
+    }
+
+    const canvas = document.createElement("canvas");
+    canvas.width = Math.max(1, Math.round(viewer.clientWidth));
+    canvas.height = Math.max(1, Math.round(viewer.clientHeight));
+    const context = canvas.getContext("2d");
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+
+    const frameStore = recentFrames[side];
+    frameStore.set(frameIndex, canvas);
+
+    while (frameStore.size > recentFrameLimit) {
+        frameStore.delete(frameStore.keys().next().value);
+    }
+}
+
+function shouldIgnoreZeroTime(observedTime, rememberedTime, rememberedAt, now) {
+    return observedTime < 0.005 &&
+        rememberedTime > 0.005 &&
+        now - rememberedAt < 1500;
+}
+
+function getAveragePauseTime() {
+    const compressedTime = getSafeVideoTime(
+        compressed,
+        lastCompressedTime,
+        lastCompressedTimeUpdatedAt
+    );
+    const enhancedTime = getSafeVideoTime(
+        enhanced,
+        lastEnhancedTime,
+        lastEnhancedTimeUpdatedAt
+    );
+    const times = [compressedTime, enhancedTime].filter(Number.isFinite);
+
+    if (!times.length) {
+        return 0;
+    }
+
+    return times.reduce((sum, time) => sum + time, 0) / times.length;
+}
+
+function getSafeVideoTime(video, rememberedTime, rememberedAt) {
+    const currentTime = video.currentTime;
+    const hasRecentRememberedTime = performance.now() - rememberedAt < 1500;
+
+    if (Number.isFinite(currentTime) && currentTime > 0.005) {
+        return currentTime;
+    }
+
+    if (hasRecentRememberedTime && rememberedTime > 0.005) {
+        return rememberedTime;
+    }
+
+    if (Number.isFinite(currentTime)) {
+        return currentTime;
+    }
+
+    return rememberedTime;
+}
+
+function drawFrozenFrames(framePair = null) {
+    if (framePair?.enhanced && framePair?.compressed) {
+        drawCanvasToCanvas(framePair.enhanced, freezeEnhanced);
+        drawCanvasToCanvas(framePair.compressed, freezeCompressed);
+        viewer.dataset.freezeFrame = String(framePair.frameIndex);
+        viewer.dataset.freezeSource = framePair.source || "cache";
+    } else {
+        drawVideoToCanvas(enhanced, freezeEnhanced);
+        drawVideoToCanvas(compressed, freezeCompressed);
+        viewer.dataset.freezeFrame = "fallback";
+        viewer.dataset.freezeSource = "fallback";
+    }
+
+    freezeCompressedWrap.style.width = overlay.style.width;
+    freezeCompressed.style.setProperty("--viewer-width", `${viewer.clientWidth}px`);
+    viewer.classList.add("is-frozen");
+}
+
+function startPackedRender(loadId) {
+    packedRenderId += 1;
+    const renderId = packedRenderId;
+
+    const render = () => {
+        if (loadId !== activeLoadId || renderId !== packedRenderId || playbackMode !== "packed") {
+            return;
+        }
+
+        drawPackedFrame();
+
+        if (!enhanced.paused && !enhanced.ended) {
+            requestAnimationFrame(render);
+        }
+    };
+
+    requestAnimationFrame(render);
+}
+
+function drawPackedFrame() {
+    if (!enhanced.videoWidth || !enhanced.videoHeight) {
+        return;
+    }
+
+    const sourceWidth = enhanced.videoWidth / 2;
+    const sourceHeight = enhanced.videoHeight;
+
+    drawPackedHalfToCanvas(0, sourceWidth, sourceHeight, freezeCompressed);
+    drawPackedHalfToCanvas(sourceWidth, sourceWidth, sourceHeight, freezeEnhanced);
+    freezeCompressedWrap.style.width = overlay.style.width;
+    freezeCompressed.style.setProperty("--viewer-width", `${viewer.clientWidth}px`);
+    viewer.dataset.freezeFrame = String(getFrameIndex(enhanced.currentTime));
+    viewer.dataset.freezeSource = "packed";
+}
+
+function drawPackedHalfToCanvas(sourceX, sourceWidth, sourceHeight, canvas) {
+    canvas.width = sourceWidth;
+    canvas.height = sourceHeight;
+    const context = canvas.getContext("2d");
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(
+        enhanced,
+        sourceX,
+        0,
+        sourceWidth,
+        sourceHeight,
+        0,
+        0,
+        sourceWidth,
+        sourceHeight
+    );
+}
+
+function drawCanvasToCanvas(source, canvas) {
+    canvas.width = source.width;
+    canvas.height = source.height;
+    const context = canvas.getContext("2d");
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(source, 0, 0, canvas.width, canvas.height);
+}
+
+function drawVideoToCanvas(video, canvas) {
+    if (!video.videoWidth || !video.videoHeight) {
+        return;
+    }
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+    const context = canvas.getContext("2d");
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+}
+
+function hideFrozenFrame() {
+    viewer.classList.remove("is-frozen");
+    if (playbackMode === "packed") {
+        viewer.classList.add("is-packed");
+    }
+}
+
+function setPlayPauseIcon(isPaused) {
+    playPauseButton.innerHTML = isPaused ? "&#9658;" : "&#10074;&#10074;";
+    playPauseButton.setAttribute("aria-label", isPaused ? "Play" : "Pause");
+}
+
+function togglePlayback() {
+    if (enhanced.paused) {
+        playBoth();
+        if (playbackMode !== "packed") {
+            startFrameSync(activeLoadId);
+        }
+        return;
+    }
+
+    pauseBothAndFreeze();
+}
+
+function startFrameSync(loadId) {
+    if (playbackMode === "packed") {
+        return;
+    }
+
+    frameSyncId += 1;
+    const syncId = frameSyncId;
+
+    const syncEnhanced = (now, metadata) => {
+        if (loadId !== activeLoadId || syncId !== frameSyncId || enhanced.paused) {
+            return;
+        }
+
+        capturePresentedFrame(enhanced, "enhanced", metadata?.mediaTime);
+        rememberVideoTime(enhanced, "enhanced", metadata?.mediaTime);
+        rememberVideoTime(compressed, "compressed");
+        syncCompressedToEnhanced();
+        enhanced.requestVideoFrameCallback(syncEnhanced);
+    };
+
+    const syncCompressed = (now, metadata) => {
+        if (loadId !== activeLoadId || syncId !== frameSyncId || enhanced.paused) {
+            return;
+        }
+
+        capturePresentedFrame(compressed, "compressed", metadata?.mediaTime);
+        compressed.requestVideoFrameCallback(syncCompressed);
+    };
+
+    if ("requestVideoFrameCallback" in enhanced) {
+        enhanced.requestVideoFrameCallback(syncEnhanced);
+        compressed.requestVideoFrameCallback(syncCompressed);
+        return;
+    }
+
+    const timer = setInterval(() => {
+        if (loadId !== activeLoadId || syncId !== frameSyncId || enhanced.paused) {
+            clearInterval(timer);
+            return;
+        }
+        rememberVideoTime(enhanced, "enhanced");
+        rememberVideoTime(compressed, "compressed");
+        syncCompressedToEnhanced();
+    }, 250);
+}
+
+function syncCompressedToEnhanced() {
+    if (
+        playbackMode === "packed" ||
+        enhanced.paused ||
+        compressed.readyState < HTMLMediaElement.HAVE_CURRENT_DATA
+    ) {
+        return;
+    }
+
+    const drift = enhanced.currentTime - compressed.currentTime;
+    const fps = getCurrentFps();
+    const frameDuration = 1 / fps;
+
+    compressed.playbackRate = Math.abs(drift) > frameDuration * 0.08
+        ? Math.max(0.5, Math.min(1.5, 1 + drift * 20))
+        : 1;
+}
+
+function restartPlayback() {
+    if (userPausing || isFreezing || isRestarting) {
+        return;
+    }
+
+    isRestarting = true;
+    frameSyncId += 1;
+    packedRenderId += 1;
+    if (playbackMode !== "packed") {
+        compressed.pause();
+    }
+    enhanced.pause();
+    const restartSeek = playbackMode === "packed"
+        ? seekTo(enhanced, 0)
+        : Promise.all([seekTo(compressed, 0), seekTo(enhanced, 0)]);
+
+    restartSeek.then(() => {
+        playBoth();
+        if (playbackMode !== "packed") {
+            startFrameSync(activeLoadId);
+        }
+    }).finally(() => {
+        isRestarting = false;
+    });
+}
+
+function updateSlider(clientX) {
+    const rect = viewer.getBoundingClientRect();
+    let x = clientX - rect.left;
+    x = Math.max(0, Math.min(x, rect.width));
+    setSlider(x / rect.width);
+}
+
+function setSlider(ratio) {
+    sliderRatio = Math.max(0, Math.min(ratio, 1));
+    const percent = `${sliderRatio * 100}%`;
+    overlay.style.width = percent;
+    freezeCompressedWrap.style.width = percent;
+    slider.style.left = percent;
+    slider.setAttribute("aria-valuenow", Math.round(sliderRatio * 100));
+}
+
+function syncOverlayVideoWidth() {
+    overlay.style.setProperty("--viewer-width", `${viewer.clientWidth}px`);
+    freezeCompressed.style.setProperty("--viewer-width", `${viewer.clientWidth}px`);
+    setSlider(sliderRatio);
+}
+
+playPauseButton.addEventListener("click", togglePlayback);
+
+enhanced.addEventListener("play", () => setPlayPauseIcon(false));
+enhanced.addEventListener("pause", () => setPlayPauseIcon(true));
+enhanced.addEventListener("ended", restartPlayback);
+enhanced.addEventListener("timeupdate", () => rememberVideoTime(enhanced, "enhanced"));
+enhanced.addEventListener("waiting", () => {
+    if (playbackMode !== "packed") {
+        compressed.pause();
+    }
+});
+enhanced.addEventListener("playing", () => {
+    if (playbackMode === "packed") {
+        startPackedRender(activeLoadId);
+        return;
+    }
+
+    if (compressed.paused) {
+        compressed.play();
+    }
+});
+enhanced.addEventListener("error", (event) => {
+    info.textContent = `Failed to load video: ${event.currentTarget.currentSrc}`;
+});
+compressed.addEventListener("error", (event) => {
+    info.textContent = `Failed to load video: ${event.currentTarget.currentSrc}`;
+});
+compressed.addEventListener("timeupdate", () => rememberVideoTime(compressed, "compressed"));
+
+qpSelect.addEventListener("change", () => {
+    const selectedVideoKey = videoSelect.selectedOptions[0]?.dataset.videoKey;
+    const selectedModel = modelSelect.value;
+    buildVideoOptions(selectedVideoKey);
+    buildModelOptions(selectedModel);
+    loadVideoPair();
+});
+
+videoSelect.addEventListener("change", () => {
+    const selectedModel = modelSelect.value;
+    buildModelOptions(selectedModel);
+    loadVideoPair();
+});
+
+modelSelect.addEventListener("change", loadVideoPair);
+
+slider.addEventListener("pointerdown", (event) => {
+    dragging = true;
+    slider.setPointerCapture?.(event.pointerId);
+});
+
+viewer.addEventListener("pointerdown", (event) => {
+    dragging = true;
+    updateSlider(event.clientX);
+});
+
+window.addEventListener("pointermove", (event) => {
+    if (dragging) {
+        updateSlider(event.clientX);
+    }
+});
+
+window.addEventListener("pointerup", () => {
+    dragging = false;
+});
+
+slider.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowLeft") {
+        setSlider(sliderRatio - 0.02);
+    }
+
+    if (event.key === "ArrowRight") {
+        setSlider(sliderRatio + 0.02);
+    }
+});
+
+window.addEventListener("resize", syncOverlayVideoWidth);
+enhanced.addEventListener("loadedmetadata", syncOverlayVideoWidth);
+syncOverlayVideoWidth();
+</script>
+</body>
+</html>
+
+
